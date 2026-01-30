@@ -1,4 +1,4 @@
-# Goodix 27c6:55b4 Fingerprint Driver for Zorin OS 18 / Ubuntu 24.04
+# Goodix 55b4 Fingerprint Driver for Ubuntu 25.10 / Zorin OS 18 
 
 An automated installer to enable the Goodix `27c6:55b4` fingerprint sensor on Zorin OS 18, Ubuntu 24.04, and related distributions.
 
@@ -10,7 +10,7 @@ This script automates the process of:
 
 ## ⚠️ Requirements & Warnings
 * **Device:** Goodix Fingerprint Reader (ID `27c6:55b4`).
-* **OS:** Zorin OS 18 or Ubuntu 24.04.
+* **OS:** Zorin OS 18 or Ubuntu 25.10.
 * **Dual Boot Warning:** If you have Windows installed, **disable the fingerprint device in Windows Device Manager** before using this. Windows may try to overwrite the firmware, breaking the Linux driver.
 
 ## Installation
@@ -28,11 +28,12 @@ This script automates the process of:
     ```
 
 3.  **Follow the prompts.** When the script finishes, enroll your finger:
+    The script might seem to be stuck at some point but you just have to touch the fingerprint scanner to let it clip your scan.
     ```bash
     fprintd-enroll
     ```
 
-4.  **Enable Login:**
+5.  **Enable Login:**
     Run `sudo pam-auth-update`, select "Fingerprint authentication" with the Spacebar, and press Enter.
 
 ## Credits
